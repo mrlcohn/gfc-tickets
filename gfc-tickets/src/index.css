@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -27,8 +28,40 @@
   justify-content: center;
 }
 
-/* TODO: change to Links */
 .navbar .links p {
   width: 80px;
   margin: auto;
+}
+
+.welcome {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  top: 75px;
+}
+
+.welcomeImg {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+}
+
+.welcomeImg img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.imgCaption {
+  font-size: 6px;
+}
+
+.welcome .options {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Rubik', 'Arial', 'Sans Serif';
 }
