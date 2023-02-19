@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Open Sans', 'Arial', 'Sans Serif';
 }
 
 .link {
@@ -32,7 +33,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  font-family: 'Open Sans', 'Arial', 'Sans Serif';
   font-weight: bold;
 }
 
@@ -61,6 +61,13 @@
   top: 75px;
 }
 
+.content .link {
+  font-family: 'Rubik', 'Arial', 'Sans Serif';
+  font-weight: bold;
+  padding: 0 15px;
+  margin: 15px 0;
+}
+
 .welcomeImg {
   margin: auto;
   display: flex;
@@ -84,10 +91,23 @@
   margin: 30px auto;
   display: flex;
   justify-content: space-evenly;
-  font-family: 'Rubik', 'Arial', 'Sans Serif';
-  font-weight: bold;
 }
 
-.welcome .options .link {
-  padding: 0 15px;
+.entryForm .row {
+  display: flex;
+}
+
+.entryForm .row .item {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px 0 0;
+}
+
+.entryForm label {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.entryForm input {
+  border-radius: 5px;
 }
