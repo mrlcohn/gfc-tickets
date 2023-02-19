@@ -6,6 +6,24 @@
   margin: 0;
 }
 
+.link {
+  text-decoration: none;
+  text-align: center;
+  color: #eee;
+  background-color: #033365;
+  height: 50px;
+  margin: auto 10px;
+  vertical-align: middle;
+  line-height: 50px;
+  border-radius: 10px;
+  box-shadow: 2px 2px #0003;
+  transition: 0.5s;
+}
+
+.link:hover {
+  background-color: #044c97;
+}
+
 .navbar {
   background-color: #eeeeee;
   position: fixed;
@@ -28,12 +46,15 @@
   justify-content: center;
 }
 
-.navbar .links p {
-  width: 80px;
-  margin: auto;
+.navbar .links .link {
+  width: 85px;
 }
 
-.welcome {
+.navbar .links .link:last-of-type {
+  margin-right: 0;
+}
+
+.content {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
@@ -64,4 +85,9 @@
   display: flex;
   justify-content: space-evenly;
   font-family: 'Rubik', 'Arial', 'Sans Serif';
+  font-weight: bold;
+}
+
+.welcome .options .link {
+  padding: 0 15px;
 }
