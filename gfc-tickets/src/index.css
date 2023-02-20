@@ -130,6 +130,10 @@
   font-size: 14px;
 }
 
+.entryForm * {
+  caret-color: transparent;
+}
+
 .entryForm input {
   border-radius: 25px;
 }
