@@ -24,6 +24,7 @@ const CreateTicket = () => {
                         <label>First Name</label>
                         <input
                             type="text"
+                            className="name"
                             required
                             value={firstName}
                             onChange={e => setFirstName(e.target.value)}
@@ -33,6 +34,7 @@ const CreateTicket = () => {
                         <label>Last Name</label>
                         <input
                             type="text"
+                            className="name"
                             required
                             value={lastName}
                             onChange={e => setLastName(e.target.value)}
@@ -91,7 +93,8 @@ const CreateTicket = () => {
                     <div className="item">
                             <label>Email for Updates (optional)</label>
                         <input
-                            type="text"
+                            type="email"
+                            className="email"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                         />

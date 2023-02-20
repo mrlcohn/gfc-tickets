@@ -12,7 +12,7 @@ const Welcome = () => {
                 <Link to="/create" className="link">
                     <p>CREATE TICKET</p>
                 </Link>
-                <p>SCAN QR CODE</p>
+                <p className="link">SCAN QR CODE</p>
             </div>
         </div>
     );
