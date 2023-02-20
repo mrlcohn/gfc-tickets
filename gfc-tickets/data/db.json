@@ -1,7 +1,41 @@
 {
-    "login":
+  "login": {
+    "email": "test@urj.org",
+    "password": "test"
+  },
+  "tickets": [
     {
-        "email": "test@urj.org",
-        "password": "test"
+      "firstName": "Leonard",
+      "lastName": "Cohn",
+      "location1": "",
+      "location2": "",
+      "type": "",
+      "description": "Need help with something in the bunk",
+      "photos": [],
+      "email": "test@urj.org",
+      "id": 1
+    },
+    {
+      "firstName": "Leonard",
+      "lastName": "Cohn",
+      "location1": "",
+      "location2": "",
+      "type": "",
+      "description": "Poop coming out of potty",
+      "photos": [],
+      "email": "poop@urj.org",
+      "id": 2
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User",
+      "location1": "cabins",
+      "location2": "a1",
+      "type": "maintenance",
+      "description": "Third time's the charm",
+      "photos": [],
+      "email": "",
+      "id": 3
     }
+  ]
 }

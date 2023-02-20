@@ -4,17 +4,29 @@ import { useNavigate } from "react-router-dom";
 const CreateTicket = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [location1, setLocation1] = useState('');
-    const [location2, setLocation2] = useState('');
-    const [type, setType] = useState('');
+    const [location1, setLocation1] = useState('cabins');
+    const [location2, setLocation2] = useState('a1');
+    const [type, setType] = useState('maintenance');
     const [description, setDescription] = useState('');
     const [photos, setPhotos] = useState([]);
     const [email, setEmail] = useState('');
+    const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
-        navigate('/');
+        const ticket = { firstName, lastName, location1, location2, type, description, photos, email };
+
+        setIsPending(true);
+
+        fetch('http://localhost:8000/tickets', {
+            method: 'POST',
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(ticket)
+        }).then(() => {
+            setIsPending(false);
+            navigate('/success');
+        });
     }
     return (
         <div className="create">
@@ -45,7 +57,6 @@ const CreateTicket = () => {
                     <div className="item">
                         <label>Area of Camp</label>
                         <select
-                            required
                             value={location1}
                             onChange={e => setLocation1(e.target.value)}
                             >
@@ -57,7 +68,6 @@ const CreateTicket = () => {
                     <div className="item">
                         <label className="form">Building/Space</label>
                         <select
-                            required
                             value={location2}
                             onChange={e => setLocation2(e.target.value)}
                             >
@@ -70,7 +80,6 @@ const CreateTicket = () => {
                     <div className="item">
                         <label>Type</label>
                         <select
-                            required
                             value={type}
                             onChange={e => setType(e.target.value)}
                             >

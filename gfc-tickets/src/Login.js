@@ -10,7 +10,6 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleSubmit = e => {
-        console.log(login.email + " " + login.password + "\n" + emailField + " " + passwordField);
         e.preventDefault();
         if (login.email === emailField && login.password === passwordField) {
             navigate('/success');
