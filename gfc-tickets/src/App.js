@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Welcome from "./Welcome";
 import Login from "./Login";
 import CreateTicket from "./CreateTicket";
+import Confirmation from "./Confirmation";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<Login />} />
               <Route path="/create" element={<CreateTicket />} />
+              <Route path="/success" element={<Confirmation />}></Route>
             </Routes>
           </div>
       </div>

@@ -3,6 +3,7 @@
 
 :root {
   --grey-accent: #c7c7c7;
+  --red-accent: #650333;
   --button: #033365;
   --button-active: #044c97;
 }
@@ -120,6 +121,11 @@
 .entryForm label {
   font-size: 10px;
   margin-bottom: 2px;
+}
+
+.entryForm .error {
+  color: var(--red-accent);
+  margin-top: -20px;
 }
 
 .item :not(label) {
