@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Confirmation from "./Confirmation";
 import useFetch from "./useFetch";
 
-const Login = () => {
+const Login = ({ user, onLogin }) => {
     const [emailField, setEmailField] = useState('');
     const [passwordField, setPasswordField] = useState('');
     const [loginAttempted, setLoginAttempted] = useState(false);
@@ -11,11 +12,17 @@ const Login = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        const user = [ emailField, passwordField ];
         if (login.email === emailField && login.password === passwordField) {
+            onLogin(user);
             navigate('/success');
         } else {
             setLoginAttempted(true);
         }
+    }
+
+    if (user.length > 0) {
+        navigate("/success");
     }
 
     return (

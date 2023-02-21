@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import handykid from './assets/handykid.jpg';
 
-const Welcome = () => {
+const Welcome = ({ user }) => {
     return (
         <div className="welcome">
             <div className="welcomeImg">
