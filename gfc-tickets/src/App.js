@@ -11,16 +11,19 @@ function App() {
 
   const handleLogin = user => setUser(user);
 
+  const handleLogout = () => setUser([]);
+
   return (
     <Router>
       <div className="app">
-        <Navbar />
+        <Navbar user={user} onLogout={handleLogout} />
           <div className="content">
             <Routes>
               <Route path="/" element={<Welcome user={user} />} />
               <Route path="/login" element={<Login user={user} onLogin={handleLogin} />} />
               <Route path="/create" element={<CreateTicket />} />
               <Route path="/success" element={<Confirmation user={user} />}></Route>
+              <Route path="/logout" element={<Confirmation user={user} />}></Route>
             </Routes>
           </div>
       </div>
